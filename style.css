@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --bg-color: rgba(41, 44, 53, 1);
+  -bg-background: url(assets/moon.svg);
+}
+
+.light{
+  -bg-background: url(assets/sun.svg);
+  --bg-color:rgba(241, 241, 241, 1);
+}
+
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+
+button{
+top: 5%;
+z-index: 1;
+cursor: pointer;
+right: 7.85px;
+position: absolute;
+border: none;
+border-radius: 50%;
+width: 86.308px;
+height: 86.308px;
+animation: slide-back 0.2s;
+}
+
+
+.light main button{
+  animation: slide-in 0.4s forwards;
+}
+
+
+.light img{
+  right: 7.85px;
+  top: 3px;
+}
+
+
+
+
+main{
+position: relative;
+background-color: black;
+width: 235.385px;
+height: 102px;
+border-radius: 59px;
+background: #000;
+}
+
+main img{
+  position: absolute;
+  top: 5%;
+}
+
+
+@keyframes slide-in{
+  from{
+    transform: translateX(7.85%);
+    
+  }
+  to{
+    transform: translateX(-135px);
+  }
+}
+@keyframes slide-back {
+  from{
+    transform: translateX(-135px);
+  }to
+  {
+    transform: translateX(7.85%);
+  }
+}
